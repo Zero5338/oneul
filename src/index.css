@@ -1,68 +1,40 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import "tailwindcss";
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+@theme {
+  /* Brand */
+  --color-brand: #FF5A36;
+  --color-brand-strong: #C93D19;
+  --color-brand-tint: #FFEAE0;
+  --color-on-brand: #231C15;
+  --color-on-dark: #FFFFFF;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  /* Surface / text */
+  --color-surface: #FAF7F2;
+  --color-surface-raised: #FFFFFF;
+  --color-border: #EAE2D6;
+  --color-ink: #231C15;
+  --color-ink-muted: #6E6355;
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+  /* Status */
+  --color-success: #1F9254;
+  --color-warning: #C97A12;
+  --color-danger: #D6432F;
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
+  /* Ranking tiers */
+  --color-tier-silver: #9AA5B1;
+  --color-tier-gold: #C99A1F;
+  --color-tier-purple: #7C4DFF;
+  --color-tier-black: #1C1C1C;
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  /* Radius (8 / 999 already match Tailwind defaults: rounded-lg / rounded-full) */
+  --radius-card: 14px;
+
+  /* Typography */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", Roboto, sans-serif;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+@layer base {
+  body {
+    @apply bg-surface text-ink;
   }
 }
